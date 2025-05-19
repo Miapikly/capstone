@@ -1,0 +1,569 @@
+:root{
+    background: fixed;
+    --main-color: rgb(144, 144, 150);
+}
+
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 auto;
+}
+
+/* Light Theme */
+
+.light{
+    background-color: rgb(144, 144, 150);
+
+    & .nav{
+        background-color: cadetblue;
+        list-style-type: none;
+        padding: 2em;
+        display: flex;
+        
+    }
+    
+    & a{
+        text-decoration: none;
+        color: gold;
+        font-size: 2.5em;
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+        transition-property: padding, background-color, color, border-radius, border;
+        transition-duration: 1s;
+    }
+    
+    & nav a:hover{
+        background-color: rgb(91, 190, 158);
+        padding: 0.5em;
+        border-radius: 1em;
+        color: darksalmon;
+        border: papayawhip 0.1em dotted;
+    }
+    
+    & .container{
+        background-color: honeydew;
+        width: 75em;
+        height: 18.75em;
+    
+    
+    }
+    
+    & .box1{
+        background-color: honeydew;
+        height: 18.75em;
+        width: 31.25em;
+    
+    
+    }
+    & .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    /* .box3{
+        background-color: gold;
+        height: 9.375em;
+        width: 9.375em;
+        position: relative;
+        bottom: 35em;
+    } */
+    
+    & .box4{
+        background-color: brown;
+    
+        height: 25em;
+        width: 18.75em;
+        bottom: 15em;
+    }
+    
+    & .box5{
+        border-radius: 0.5em;
+        top: 5em;
+        background-color: rgb(222, 43, 43);
+        height: 25em;
+        width: 21.875em;
+    
+    }
+    
+    & .layout {
+        width: 100%;
+      
+        display: grid;
+        grid:
+          "header header header" auto
+          "leftSide body rightSide" 1fr
+          "footer footer footer" auto
+          / auto 1fr auto;
+        gap: 8px;
+    }
+      
+    & .header { 
+        grid-area: header; 
+        background-color: floralwhite;
+        height: 150px;
+        width: 100%;
+    }
+    
+    & .leftSide { 
+        grid-area: leftSide; 
+        background-color: lavender;
+        width: 300px;
+    
+    }
+    
+    & .body { 
+        grid-area: body; 
+        background-color: lightcoral;
+        width: 1650px;
+        height: 900px;
+    }
+    
+    & .rightSide { 
+        grid-area: rightSide;
+        background-color: rgb(202, 253, 200); 
+        width: 300px;
+    }
+    
+    & .footer { 
+        grid-area: footer; 
+        background-color: mistyrose;
+        height: 150px;
+        width: 100%;
+    
+    }
+    
+    & h2{
+        text-align: center;
+        margin-top: 3em;
+        font-size: 3em;
+        font-family: "Coral Pixels", serif;
+        background-color: honeydew;
+        padding: 0.75em;
+    }
+    
+    & input{
+        border-radius: 5em;
+        padding: 3em;
+        width: 75%;
+    }
+
+    
+    & #searchInput{
+/*         margin-top: 2em; */
+        width: 75%;
+        margin: 2em 1em 1em 5em;
+        background-color: lavenderblush;
+        border: 0.25em dashed darkcyan;
+    }
+
+    & #search-btn{
+        width: 15%;
+        height: 5em;
+        border-radius: 2em;
+        background-color: darkcyan;
+        border: 0.25em dotted lavenderblush;
+        color: lavenderblush;
+    }
+    
+    & label{
+        font-size: 5em;
+        color: rgb(244, 139, 139);
+    }
+    
+    & form{
+        display: flex;
+        margin-top: 5em;
+        flex-direction: column;
+        font-family: "Flavors", serif;
+        background-color: azure;
+        padding: 10em;
+        flex-wrap: wrap;
+    }
+    
+    & #submit{
+        width: 10em;
+        height: 3em;
+        font-size: 2.5em;
+        font-family: "Bungee Hairline", serif;
+        font-weight: bold;
+        color: lightseagreen;
+        background-color: papayawhip;
+        border-radius: 3em;
+        border: 0.25em dashed peachpuff;
+        margin-top: 1em;
+    }
+    
+    & #generate-char{
+        border-radius: 3em;
+        display: flex;
+        width: 15em;
+        text-align: center;
+        height: 2.5em;
+        font-size: 2.5em;
+        font-family: "Bungee Hairline", serif;
+        font-weight: bold;
+        margin-top: 2em;
+        background-color: antiquewhite;
+        color: rgb(113, 189, 182);
+        border: 0.05em dashed peachpuff;
+    }
+
+    & #container2{
+        background-color: azure;
+        font-family: "Micro 5", serif;
+    }
+    
+    & #render{
+        display: flex;
+    }
+
+    & .character{
+        background-color: rgb(202, 194, 245);
+        margin: 1em;
+        padding: 1em;
+        text-align: center;
+        border-radius: 1.5em;
+        color: crimson;
+        font-family: "Fredericka The Great", serif;
+        font-size: 1em;
+    }
+
+    & #light-btn{
+        background-color: aliceblue;
+        padding: 1em;
+        border-radius: 2em;
+        color: brown;
+        font-size: 1.5em;
+        margin: 1.4em 1em 1em 1em;
+        font-family: "Coral Pixels",serif;
+    }
+
+    & #dark-btn{
+        background-color: slategrey;
+        padding: 1em;
+        border-radius: 2em;
+        color: red;
+        font-size: 1.5em;
+        margin: 1.4em 1em 1em 1em;
+        font-family: "Coral Pixels",serif;
+    }
+
+    & .footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    & #time{
+        text-align: center;
+        font-size: 5em;
+        color: rgb(0, 0, 0);
+        font-family: "Micro 5", serif;
+    }
+
+    & #desc{
+        font-size: 2em;
+        text-align: center;
+        font-family: "Fredericka the Great", serif;
+        margin: 1em 5em 1em 5em;
+        color: rgb(48, 152, 116);
+        padding: 2.5em;
+        background-color: rgb(229, 255, 246);
+        border-radius: 3em;
+    }
+
+    & h1{
+        color: crimson;
+        font-size: 5em;
+        text-align: center;
+        font-family: "Micro 5", serif;
+        margin: 3em 5em 1em 5em;
+    }
+}
+
+.dark{
+    background-color: rgb(70, 63, 70);
+
+    & .nav{
+        background-color: darkslategrey;
+        list-style-type: none;
+        padding: 2em;
+        display: flex;
+        
+    }
+    
+    & a{
+        text-decoration: none;
+        color: gold;
+        font-size: 2.5em;
+        font-family: "Fredericka the Great", serif;
+        font-weight: 400;
+        font-style: normal;
+        transition-property: padding, background-color, color, border-radius, border;
+        transition-duration: 1s;
+    }
+    
+    & nav a:hover{
+        background-color: rgb(91, 190, 158);
+        padding: 0.5em;
+        border-radius: 1em;
+        color: darksalmon;
+        border: papayawhip 0.1em dotted;
+    }
+
+    
+    & .container{
+        background-color: rgb(85, 84, 126);
+        width: 75em;
+        height: 18.75em;
+    }
+    
+    & .box1{
+        background-color: rgb(85, 84, 126);
+        height: 18.75em;
+        width: 31.25em;
+    
+    
+    }
+    & .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    & .box5{
+        border-radius: 0.5em;
+        top: 5em;
+        background-color: rgb(223, 27, 27);
+        height: 25em;
+        width: 21.875em;
+    
+    }
+    
+    
+    & .layout {
+        width: 100%;
+      
+        display: grid;
+        grid:
+          "header header header" auto
+          "leftSide body rightSide" 1fr
+          "footer footer footer" auto
+          / auto 1fr auto;
+        gap: 8px;
+    }
+      
+    & .header { 
+        grid-area: header; 
+        background-color: rgb(92, 54, 63);
+        height: 9.375em;
+        width: 100%;
+    }
+    
+    & .leftSide { 
+        grid-area: leftSide; 
+        background-color: rgb(62, 62, 77);
+        width: 18.75em;
+    
+    }
+    
+    & .body { 
+        grid-area: body; 
+        background-color: rgb(67, 44, 67);
+        width:103.125em;
+        height: 56.25em;
+    }
+    
+    & .rightSide { 
+        grid-area: rightSide;
+        background-color: rgb(64, 87, 80); 
+        width: 18.75em;
+    }
+    
+    & .footer { 
+        grid-area: footer; 
+        background-color: rgb(121, 83, 89);
+        height: 9.375em;
+        width: 100%;
+    
+    }
+    
+    & h2{
+        text-align: center;
+        margin-top: 3em;
+        font-size: 3em;
+        font-family: "Coral Pixels", serif;
+        background-color: rgb(90, 86, 114);
+        padding: 0.75em;
+    }
+    
+    & input{
+        border-radius: 5em;
+        padding: 3em;
+        width: 75%;
+    }
+
+    & #searchInput{
+        margin-top: 2em;
+    }
+    
+    & label{
+        font-size: 5em;
+        color: rgb(255, 5, 5);
+    }
+    
+    & form{
+        display: flex;
+        margin-top: 5em;
+        flex-direction: column;
+        font-family: "Flavors", serif;
+        background-color: rgb(70, 110, 110);
+        padding: 10em;
+        flex-wrap: wrap;
+    }
+    
+    & #submit{
+        width: 10em;
+        height: 3em;
+        font-size: 2.5em;
+        font-family: "Bungee Hairline", serif;
+        font-weight: bold;
+        color: rgb(0, 255, 242);
+        background-color: rgb(186, 147, 85);
+        border-radius: 3em;
+        border: 0.25em dashed peachpuff;
+        margin-top: 1em;
+    }
+
+    & #name{
+        background-color: bisque;
+    }
+
+    & #searchInput{
+        /*         margin-top: 2em; */
+        width: 75%;
+        margin: 2em 1em 1em 5em;
+        background-color: rgb(250, 37, 108);
+        border: 0.25em dashed darkcyan;
+    }
+
+    & #search-btn{
+        width: 15%;
+        height: 5em;
+        border-radius: 2em;
+        background-color: darkcyan;
+        border: 0.25em dotted rgb(250, 37, 108);
+        color: rgb(250,37,108);
+    }
+    
+    & #generate-char{
+        border-radius: 3em;
+        display: flex;
+        width: 15em;
+        text-align: center;
+        height: 2.5em;
+        font-size: 2.5em;
+        font-family: "Bungee Hairline", serif;
+        font-weight: bold;
+        margin-top: 2em;
+        background-color: rgb(190, 150, 94);
+        color: rgb(0, 255, 229);
+        border: 0.05em dashed peachpuff;
+    }
+
+    & #container2{
+        background-color: rgb(65, 102, 104);
+        font-family: "Micro 5", serif;
+    }
+
+    & #render{
+        display: flex;
+    }
+
+    & .character{
+        background-color: rgb(202, 194, 245);
+        margin: 1em;
+        padding: 1em;
+        text-align: center;
+        border-radius: 1.5em;
+        color: crimson;
+        font-family: "Fredericka The Great", serif;
+        font-size: 1em;
+        flex-wrap: wrap;
+    }
+    
+    & #light-btn{
+        background-color: aliceblue;
+        padding: 1em;
+        border-radius: 2em;
+        color: brown;
+        font-size: 1.5em;
+        margin: 1.4em 1em 1em 1em;
+        font-family: "Coral Pixels",serif;
+    }
+
+    & #dark-btn{
+        background-color: slategrey;
+        padding: 1em;
+        border-radius: 2em;
+        color: red;
+        font-size: 1.5em;
+        margin: 1.4em 1em 1em 1em;
+        font-family: "Coral Pixels",serif;
+    }
+
+    & .footer{
+        display: flex;
+        justify-content: center;
+    }
+    
+    & #time{
+        text-align: center;
+        font-size: 5em;
+        color: white;
+        font-family: "Micro 5", serif;
+    }
+
+    & #desc{
+        font-size: 2em;
+        text-align: center;
+        font-family: "Fredericka the Great", serif;
+        margin: 1em 5em 1em 5em;
+        color: turquoise;
+        padding: 2.5em;
+        background-color: rgb(51, 88, 153);
+        border-radius: 3em;
+    }
+
+    & h1{
+        color: crimson;
+        font-size: 5em;
+        text-align: center;
+        font-family: "Micro 5", serif;
+        margin: 3em 5em 1em 5em;
+    }
+}
+
+h3{
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 756px) {
+    .box {
+      width: 75%;
+    }
+    .nav{
+        flex-direction: column;
+    }
+    .form{
+        width: 100%;
+        height: 100%;
+        padding: 2em;
+    }
+    label{
+        font-size: 10%;
+    }
+    #submit{
+        width: 5em;
+    }
+  }

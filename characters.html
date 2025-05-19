@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" href="capstone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!--  <script src="capstone.js" defer></script> -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Coral+Pixels&family=Flavors&family=Fredericka+the+Great&family=Micro+5&family=Rubik+Puddles&display=swap" rel="stylesheet">
+</head>
+<body class="light">
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="characters.html">Characters</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="layout">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name, story, or role" size="50">
+                <button onclick="search()" id="search-btn">Search</button>
+            </div>
+        </div>
+        <div class="leftSide"></div>
+        <div class="body" id="body">
+            <div id="render">
+                
+            </div>
+            <div id="container1" class="container1">
+                <button id="generate-char" onclick="generateChar()">Generate a random character!</button>
+            </div>
+            <div id="container2">
+
+            </div>
+            <div class="populate" id="populate">
+                <p>Showing <span id="charadiv">0</span> characters</p>
+            </div>
+        </div>
+        <div class="rightSide"></div>
+        <div class="footer">
+            <button id="light-btn" class="active">
+                Light Theme
+            </button>
+            <button id="dark-btn">
+                Dark Theme
+            </button>
+            <div id="time"></div>
+        </div>
+      </section>
+    <script src="capstone.js"></script>
+    <script src="character.js"></script>
+    </body>
+    </html>
